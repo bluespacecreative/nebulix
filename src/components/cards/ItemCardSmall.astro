@@ -12,22 +12,22 @@ const cardAnimation = `card_${animate ? content.slug : Math.random()}`;
 <a
   href={`/${base_url}/${content.slug}/`}
   transition:name={`${cardAnimation}`}
-  class="fade-up surface-overlay-hover group relative z-10 flex justify-between gap-8 rounded-md px-5 py-4 md:-ml-4 md:p-4"
+  class="relative z-10 gap-8 px-5 py-4 rounded-md blog-row fade-up surface-overlay-hover group md:p-4"
 >
-  <div class="opacity-100 group-hover:opacity-100">
+  <div class="opacity-100 blog-excerpt group-hover:opacity-100">
     {
       content.data.pubDate && (
-        <span class="text-overline text-xs">
+        <span class="text-xs text-overline">
           <FormattedDate date={content.data.pubDate} />
         </span>
       )
     }
-    <h2 class="subtitle balance font-bold">
+    <h2 class="font-bold subtitle balance">
       {content.data.title}
     </h2>
     {
       content.data.intro && (
-        <p class="balance line-clamp-3 py-1">{content.data.intro}</p>
+        <p class="py-1 balance line-clamp-3">{content.data.intro}</p>
       )
     }
     {
@@ -47,7 +47,7 @@ const cardAnimation = `card_${animate ? content.slug : Math.random()}`;
     }
   </div>
   <div
-    class="blog-card-small h-20 w-20 shrink-0 grow-0 overflow-hidden rounded-md"
+    class="w-20 h-20 overflow-hidden rounded-md blog-card-small shrink-0 grow-0"
     transition:name={`${animation}`}
   >
     {
@@ -70,3 +70,16 @@ const cardAnimation = `card_${animate ? content.slug : Math.random()}`;
     }
   </div>
 </a>
+
+<style>
+  .blog-excerpt {
+    /* max-width: calc(100% - 7rem); */
+  }
+
+  .blog-row {
+    /* max-width: 45ch; */
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+</style>

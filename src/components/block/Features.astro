@@ -14,10 +14,10 @@ const { content, container, features } = Astro.props;
 
     {
       features && (
-        <ul class="features my-10 flex flex-wrap justify-center gap-4 ">
+        <ul class="flex flex-wrap justify-center gap-4 my-10 features ">
           {features.map((feature, index) => (
             <li
-              class={`features__item fade-up flex flex-1 flex-col items-center rounded-md text-center`}
+              class={`features__item fade-up flex  flex-1 flex-col items-center rounded-md text-center`}
               style={`--animation-delay: ${(index + 1) * 150}ms`}
             >
               {feature.icon && (
@@ -31,7 +31,7 @@ const { content, container, features } = Astro.props;
               )}
               <div
                 set:html={marked.parse(feature.content)}
-                class="richtext no-lead px-4 py-8"
+                class="px-4 py-8 richtext no-lead"
               />
             </li>
           ))}

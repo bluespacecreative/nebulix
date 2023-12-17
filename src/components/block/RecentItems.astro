@@ -89,7 +89,7 @@ const sizes = getGridImageSizes(container);
             <a
               href={`/${base_url}`}
               aria-label={t("show_more")}
-              class="fade-up surface-primary group grid aspect-square h-full w-full place-items-center py-8 transition-colors duration-500 hover:bg-dark"
+              class="grid w-full h-full py-8 transition-colors duration-500 fade-up surface-primary group aspect-square place-items-center hover:bg-dark"
             >
               <span class="subtitle">
                 <Icon
@@ -107,7 +107,7 @@ const sizes = getGridImageSizes(container);
       template === "list" && (
         <div class="grid gap-14 md:grid-cols-2">
           <div>
-            <div class="sticky top-8 grid gap-4">
+            <div class="sticky grid gap-4 top-8">
               <h2 class="title-sm" id={slugify(title)}>
                 {title}
               </h2>
@@ -122,11 +122,11 @@ const sizes = getGridImageSizes(container);
                 <ItemCardSmall content={post} base_url={base_url} {animate} />
               </li>
             ))}
-            <li class="fade-up flex justify-end">
+            <li class="flex justify-end fade-up">
               <a
                 href={`/${base_url}`}
                 aria-label={t("show_more")}
-                class=" btn btn-icon surface-primary mr-2"
+                class="mr-2 btn btn-icon surface-primary"
               >
                 <Icon
                   name="right"
@@ -143,8 +143,8 @@ const sizes = getGridImageSizes(container);
 
 <style lang="postcss">
 .recent-blogs ul.bloglist {
-		width: calc(100% + var(--container-spacing));
-		margin-left: calc(var(--spacing) * -1);
+		/* width: calc(100% + var(--container-spacing)); */
+		/* margin-left: calc(var(--spacing) * -1); */
 		
 		@screen md {  
 			width: 100%;

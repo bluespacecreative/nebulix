@@ -120,7 +120,7 @@ const hasBlocks = blocks && blocks.length > 0;
             variation_images.map((image) => (
               <a
                 aria-label={t("enlarge_image")}
-                class="  group relative overflow-hidden rounded-md shadow-lg transition-transform duration-500 hover:-translate-y-1 hover:scale-105"
+                class="group relative overflow-hidden rounded-md shadow-lg transition-transform  duration-500 hover:-translate-y-1 hover:scale-105"
                 href={`/images/${
                   image.thumbnail.split("/").pop().split(".")[0]
                 }`}
@@ -233,8 +233,8 @@ const hasBlocks = blocks && blocks.length > 0;
   .page-split__content {
     .img,
     iframe {
-      width: calc(100% + var(--container-spacing));
-      margin-left: calc(var(--spacing) * -1);
+      /* width: calc(100% + var(--container-spacing)); */
+      /* margin-left: calc(var(--spacing) * -1); */
       @apply my-10 aspect-video h-auto;
       @screen md {
         width: 100%;

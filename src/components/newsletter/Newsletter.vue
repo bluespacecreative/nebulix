@@ -1,7 +1,7 @@
 <template>
   <form
     name="newsletter-subscribes"
-    class="relative inline-flex items-center gap-4 py-4"
+    class="relative inline-flex flex-wrap items-center gap-4 py-4"
     @submit.prevent="submit"
   >
     <input

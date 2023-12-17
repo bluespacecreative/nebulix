@@ -411,14 +411,14 @@ a.link-underline {
   .is-inactive {
     &.fade-up,
     .fade-up {
-      @apply scale-95;
+      /* @apply scale-95; */
     }
   }
 
   .out-of-screen {
     &.fade-up,
     .fade-up {
-      @apply scale-95 opacity-90;
+      /* @apply scale-95 opacity-90; */
     }
     &.fade-in,
     .fade-in {
@@ -488,4 +488,8 @@ a.link-underline {
   .nav {
     @apply -translate-y-full;
   }
+}
+
+h1 {
+  margin-bottom: 1.25rem;
 }
