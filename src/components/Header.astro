@@ -15,17 +15,17 @@ const isActive = (href) => {
 };
 ---
 
-<header class="surface-menu nav sticky top-0 z-50" transition:name="nav">
-  <nav class="container-xl flex flex-nowrap items-stretch gap-6">
+<header class="sticky top-0 z-50 surface-menu nav" transition:name="nav">
+  <nav class="flex items-stretch gap-6 container-xl flex-nowrap">
     <a
       href="/"
       aria-label={title}
-      class="grid place-items-center py-3 text-primary"
+      class="grid py-3 place-items-center text-primary"
       ><Icon name="logo" class="h-6" /></a
     >
     {
       menu && (
-        <ul class="nav-underline nav-links relative hidden flex-nowrap pl-4 uppercase tracking-wide before:absolute before:inset-y-4 before:left-0 before:border-l-2 before:border-primary before:border-opacity-50 md:flex ">
+        <ul class="relative hidden pl-4 tracking-wide uppercase nav-underline nav-links flex-nowrap md:flex ">
           {menu.map((link) => (
             <li class={`${isActive(link.href) ? "active font-semibold" : ""}`}>
               <a href={link.href} class={`block py-3`}>
@@ -39,7 +39,7 @@ const isActive = (href) => {
 
     {
       (
-        <ul class="nav-underline relative -mr-4  ml-auto flex flex-nowrap justify-end pl-4 uppercase md:mr-0">
+        <ul class="relative flex justify-end pl-4 ml-auto -mr-4 uppercase nav-underline flex-nowrap md:mr-0">
           <li>
             <CartButton
               label={t("cart")}
@@ -47,7 +47,7 @@ const isActive = (href) => {
               transition:persist
               transition:name="cart"
             >
-              <Icon name="shopping-cart" class="h-6 w-6" />
+              <Icon name="shopping-cart" class="w-6 h-6" />
             </CartButton>
           </li>
           <li>
@@ -77,12 +77,12 @@ const isActive = (href) => {
               client:idle
               translations={{ menu: t("menu"), close: t("close") }}
             >
-              <Icon name="menu-solid" class="h-10 w-10" slot="menu" />
+              <Icon name="menu-solid" class="w-10 h-10" slot="menu" />
 
-              <Icon name="close" class="h-10 w-10" slot="close" />
+              <Icon name="close" class="w-10 h-10" slot="close" />
               <Icon name="logo" class="w-full" slot="logo" />
               <ul
-                class="mobile-links nav-links mt-3 w-full text-center"
+                class="w-full mt-3 text-center mobile-links nav-links"
                 slot="links"
               >
                 {menu.map((link, index) => (
@@ -102,7 +102,7 @@ const isActive = (href) => {
               </ul>
 
               <ul
-                class="relatives flex w-full flex-wrap justify-center gap-2 py-4"
+                class="flex flex-wrap justify-center w-full gap-2 py-4 relatives"
                 slot="social"
               >
                 {social.map((link, index) => (
@@ -116,7 +116,7 @@ const isActive = (href) => {
                       target="_blank"
                       aria-label={link.label}
                     >
-                      <Icon name={link.icon} class="h-8 w-8" />
+                      <Icon name={link.icon} class="w-8 h-8" />
                     </a>
                   </li>
                 ))}
