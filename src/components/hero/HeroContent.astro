@@ -1,0 +1,75 @@
+---
+import Button from "@components/navigation/Button.astro";
+import ItemFilter from "@components/navigation/ItemFilter.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+
+const {
+  title,
+  hero_buttons,
+  intro,
+  tag,
+  filter,
+  filters,
+  filter_type,
+  pubDate,
+  base_url,
+} = Astro.props;
+---
+
+<div class="hero-text z-10 grid place-items-center bg-dark bg-opacity-20">
+  <div class="container-xl py-8">
+    <div class="max-w-3xl">
+      {
+        pubDate && (
+          <span class="text-overline">
+            <FormattedDate date={pubDate} />
+          </span>
+        )
+      }
+      <h1 class="title">
+        {title || "website title"}
+      </h1>
+      {intro && <div class="subtitle balance py2"> {intro}</div>}
+
+      {
+        tag && (
+          <ItemFilter
+            filters={tag}
+            className="mt-4 justify-start"
+            links={true}
+            {base_url}
+          />
+        )
+      }
+
+      {
+        filters && (
+          <ItemFilter
+            filters={filters}
+            className="mt-4"
+            links={true}
+            active={filter}
+            type={filter_type}
+            {base_url}
+          />
+        )
+      }
+      {
+        hero_buttons && hero_buttons.length > 0 && (
+          <div class="flex flex-wrap gap-4 pt-8">
+            {hero_buttons.map((btn) => (
+              <Button {...btn} />
+            ))}
+          </div>
+        )
+      }
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-text {
+    min-height: calc((100vw / 16 * 9) - 64px);
+  }
+</style>

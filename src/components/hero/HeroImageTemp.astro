@@ -1,8 +1,5 @@
 ---
 import { Picture, BackgroundPicture } from "astro-imagetools/components";
-import Button from "@components/navigation/Button.astro";
-import ItemFilter from "@components/navigation/ItemFilter.astro";
-import FormattedDate from "@components/FormattedDate.astro";
 
 import HeroContent from "@components/hero/HeroContent.astro";
 
@@ -41,9 +38,31 @@ const { slug } = Astro.params;
             },
           }}
           src={thumbnail}
+          width={1920}
+          height={1080}
+          ar={1920 / 1080}
+          alt={title}
+          breakpoints={[1000, 1280, 1440, 1536, 1920]}
+          sizes="100vw"
+          loading="eager"
+          layout="fill"
+          position="entropy"
+          artDirectives={[
+            {
+              media: "(max-width: 500px)",
+              ar: 1920 / 1080,
+              src: thumbnail,
+              breakpoints: [320, 360, 390, 412, 500, 601, 768, 1024, 1200],
+            },
+            {
+              media: "(max-width: 1000px)",
+              ar: 1920 / 1080,
+              src: thumbnail,
+              breakpoints: [500, 601, 768, 820, 962, 1280, 1440, 1536, 1920],
+            },
+          ]}
         >
           <HeroContent
-            {title}
             {hero_buttons}
             {pubDate}
             {base_url}
