@@ -51,10 +51,10 @@ const fonts = [
   }
 </style>
 <BaseLayout title="Font Preview">
-  <div class="grid fonts-grid">
+  <div class="fonts-grid grid">
     {
       fonts.map((item) => (
-        <article>
+        <article class="border border-primary p-3">
           <h1 class="font-bold">{item}</h1>
           <div>
             <section class={item}>{characteers}</section>
