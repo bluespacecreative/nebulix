@@ -157,7 +157,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "halyard-micro", "Adjusted Arial Fallback", "arial", sans-serif;
+  font-family: "halyard-display", "Adjusted Arial Fallback", "arial", sans-serif;
 }
 
 .container {
@@ -352,7 +352,7 @@ h3 {
 /* TYPOGRAFY */
 
 .title {
-  @apply text-4xl font-extrabold !leading-[1.2] sm:text-6xl md:text-5xl lg:text-7xl;
+  @apply text-4xl font-extrabold  sm:text-6xl md:text-5xl lg:text-7xl;
   text-wrap: balance;
 
   &-md {
