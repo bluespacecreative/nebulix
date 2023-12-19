@@ -1,3 +1,7 @@
+@import url("https://use.typekit.net/ryj8bhw.css");
+
+@import url("https://use.typekit.net/dap1xle.css");
+
 @tailwind base;
 
 @layer base {
@@ -144,10 +148,16 @@ body {
   @screen xs {
     --spacing: 2rem;
   }
-  font-family: "Inter Tight Variable", "Adjusted Arial Fallback", "arial",
-    sans-serif;
+
+  font-family: "halyard-text", "Adjusted Arial Fallback", "arial", sans-serif;
   --container-spacing: calc(var(--spacing) * 2);
   --grid-spacing: calc(var(--spacing) / 2);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "halyard-micro", "Adjusted Arial Fallback", "arial", sans-serif;
 }
 
 .container {
