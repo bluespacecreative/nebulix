@@ -352,7 +352,7 @@ h3 {
 /* TYPOGRAFY */
 
 .title {
-  @apply text-4xl font-extrabold sm:text-6xl md:text-5xl lg:text-7xl;
+  @apply text-4xl font-extrabold !leading-[1.2] sm:text-6xl md:text-5xl lg:text-7xl;
   text-wrap: balance;
 
   &-md {
