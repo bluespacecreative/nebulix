@@ -2,7 +2,7 @@
 import { getEntry } from "astro:content";
 import { ViewTransitions } from "astro:transitions";
 import { importImage } from "astro-imagetools/api";
-import "../styles/font.css";
+
 import "../styles/global.css";
 
 const { data } = await getEntry("config", "about");
@@ -61,6 +61,8 @@ const pageTitle = `${title} | ${data.sitename}`;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 {socialImage && <meta property="twitter:image" content={socialImage} />}
+
+<link rel="stylesheet" href="https://use.typekit.net/dap1xle.css" />
 
 <script is:inline>
   const setDarkMode = () => {
