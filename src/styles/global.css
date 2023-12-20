@@ -1,8 +1,7 @@
-@import url("https://use.typekit.net/ryj8bhw.css");
-
-@import url("https://use.typekit.net/dap1xle.css");
-
 @tailwind base;
+
+@import url("https://use.typekit.net/ryj8bhw.css");
+@import url("https://use.typekit.net/dap1xle.css");
 
 @layer base {
   :root {
