@@ -155,7 +155,7 @@ h1,
 h2,
 h3 {
   font-family: "halyard-display", "Adjusted Arial Fallback", "arial", sans-serif;
-  font-weight: 600;
+  @apply !font-semibold;
 }
 
 .container {
