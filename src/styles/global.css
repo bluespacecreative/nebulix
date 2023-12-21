@@ -146,7 +146,7 @@ body {
   }
 
   font-family: "halyard-text", "Adjusted Arial Fallback", "arial", sans-serif;
-  font-weight: 300;
+  /* font-weight: 300; */
   --container-spacing: calc(var(--spacing) * 2);
   --grid-spacing: calc(var(--spacing) / 2);
 }
@@ -155,7 +155,8 @@ h1,
 h2,
 h3 {
   font-family: "halyard-display", "Adjusted Arial Fallback", "arial", sans-serif;
-  @apply !font-semibold;
+  letter-spacing: 1px;
+  /* @apply !font-semibold; */
 }
 
 .container {
